@@ -9,14 +9,12 @@ export type SectionStep = {
 
 export type Section = {
   id: string;
-  showArrows: boolean;
   steps: SectionStep[];
 };
 
 export const sections: Section[] = [
   {
     id: "about",
-    showArrows: false,
     steps: [
       {
         title: "Who am I?",
@@ -26,7 +24,6 @@ export const sections: Section[] = [
   },
   {
     id: "projects",
-    showArrows: true,
     steps: [
       {
         title: "Project 1",

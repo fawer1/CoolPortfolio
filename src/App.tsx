@@ -1,12 +1,32 @@
 import './index.css'
 import ScrollSection from './components/ScrollSection';
 import ColorBends from './components/BackgroundLayer';
+import LoadingScreen from './components/LoadingScreen';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [showLoader, setShowLoader] = useState(true);
+  const contentVisible = !showLoader;
+  useEffect(() => {
+    const t = setTimeout(() => setShowLoader(false), 5000);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <>
-      <main className="text-white fixed inset-0 z-10 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr]">
+      {showLoader && (
+        <LoadingScreen
+          durationMs={5000}
+          inMs={1000}
+          outMs={1200}
+          onComplete={() => setShowLoader(false)}
+        />
+      )}
+      <main className={
+        `text-white fixed inset-0 z-10 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] ` +
+        `${contentVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.7]'} ` +
+        `transition-transform duration-700 ease-out`
+      }>
         {/* Grid cell borders overlay */}
         <div className="absolute inset-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] pointer-events-none">
           {[1, 2, 3, 4].map((r) => (

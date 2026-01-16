@@ -1,14 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import type { ReactNode, Key } from "react";
 
-type TextAreaProps = {
+type TitleAreaProps = {
     contentKey: Key;
     children: ReactNode;
 };
 
-export default function TextArea({ contentKey, children }: TextAreaProps) {
+export default function TextArea({ contentKey, children }: TitleAreaProps) {
     return (
-        <div className="col-start-2 row-start-2 row-span-2 flex items-center transform translate-x-2/12">
+        <div className="col-start-1 row-start-1 row-span-1 flex items-center justify-center">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={contentKey}

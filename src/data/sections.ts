@@ -15,6 +15,16 @@ export type Section = {
 
 export const sections: Section[] = [
   {
+    id: "about",
+    showArrows: false,
+    steps: [
+      {
+        title: "Who am I?",
+        text: "I am an enthusiastic digital designer..."
+      }
+    ]
+  },
+  {
     id: "projects",
     showArrows: true,
     steps: [
@@ -30,16 +40,6 @@ export const sections: Section[] = [
       }
     ]
   },
-  {
-    id: "about",
-    showArrows: false,
-    steps: [
-      {
-        title: "Who am I?",
-        text: "I am an enthusiastic digital designer..."
-      }
-    ]
-  }
 ];
 
 export default sections;

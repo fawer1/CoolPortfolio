@@ -33,7 +33,7 @@ export default function App() {
         frequency={1}
         mouseInfluence={1}
         noise={0}
-        colors={["#1f1f1f", "#1f1f1f", "#1f1f1f"]}
+        colors={["#000000", "#1f1f1f", "#000000"]}
       />
     </>
   )

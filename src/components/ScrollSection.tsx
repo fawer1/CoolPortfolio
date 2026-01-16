@@ -105,8 +105,6 @@ export default function ScrollLayout() {
 
     return (
         <GridFrame>
-            {/* Accessibility live region for announcing step changes */}
-            <div className="sr-only" aria-live="polite">{step.title}</div>
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-2xl mb-4">{step.title}</h2>

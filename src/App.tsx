@@ -4,9 +4,9 @@ import ScrollSection from './components/ScrollSection';
 export default function App() {
 
   return (
-    <main className="bg-neutral-950 text-white fixed inset-0 grid grid-cols-[64px_1fr_1fr_64px] grid-rows-[80px_1fr_1fr_80px]">
+    <main className="bg-neutral-950 text-white fixed inset-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr]">
       {/* Grid cell borders overlay */}
-      <div className="absolute inset-0 grid grid-cols-[64px_1fr_1fr_64px] grid-rows-[80px_1fr_1fr_80px] pointer-events-none">
+      <div className="absolute inset-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] pointer-events-none">
         {[1, 2, 3, 4].map((r) => (
           [1, 2, 3, 4].map((c) => (
             <div
@@ -29,10 +29,6 @@ export default function App() {
         ))}
       </div>
       <ScrollSection />
-      {/* <Header />
-        <TextArea />
-        <MediaArea />
-        <Navigation /> */}
     </main>
   )
 }

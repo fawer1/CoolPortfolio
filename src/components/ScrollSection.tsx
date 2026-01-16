@@ -118,7 +118,7 @@ export default function ScrollLayout() {
 
             {/* NAVIGATION */}
             <Navigation
-                visible={section.showArrows}
+                visible={section.steps.length > 1}
                 canPrev={stepIndex > 0 || sectionIndex > 0}
                 canNext={stepIndex < section.steps.length - 1 || sectionIndex < sections.length - 1}
                 onPrev={() => {

@@ -24,6 +24,19 @@ body {
   overflow: hidden;
 }
 
+/* Hanbit brand font (Noto Serif KR variable) */
+@font-face {
+  font-family: "HanbitBrand";
+  src: url("./assets/NotoSerifKR-VariableFont_wght.woff2") format("woff2"),
+       url("./assets/NotoSerifKR-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+.hanbit-brand {
+  font-family: "HanbitBrand", serif;
+}
+
 /* Loading animation for 한빛 */
 @keyframes hanbit-enter {
   0% { opacity: 0; transform: scale(0.6); }

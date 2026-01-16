@@ -4,6 +4,7 @@ import ColorBends from './components/BackgroundLayer';
 import LoadingScreen from './components/LoadingScreen';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import ShinyText from './components/GlowingText';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -54,6 +55,23 @@ export default function App() {
               </div>
             </motion.div>
           )}
+          {brandVisible && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="col-start-1 row-start-1 flex justify-center items-center"
+            >
+              <ShinyText
+                className='text-2xl'
+                text='Portfolio'
+                color="#e7000b"
+                shineColor="#91080f"
+                yoyo
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
         {/* Grid cell borders overlay */}
         <div className="absolute inset-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] pointer-events-none">
@@ -81,7 +99,7 @@ export default function App() {
         frequency={1}
         mouseInfluence={1}
         noise={0}
-        colors={["#000000", "#1f1f1f", "#000000"]}
+        colors={["#000000", "#101010", "#000000"]}
       />
     </>
   )

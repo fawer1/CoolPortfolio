@@ -107,8 +107,8 @@ export default function ScrollLayout() {
         <GridFrame>
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
-                <h2 className="text-red-600 text-2xl mb-4">{step.title}</h2>
-                <p className="text-red-600">{step.text}</p>
+                <h2 className="text-red-600 text-4xl mb-4 waterfall">{step.title}</h2>
+                <p className="text-red-600 text-2xl ibarra">{step.text}</p>
             </TextArea>
 
             {/* MEDIA */}

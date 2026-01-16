@@ -33,8 +33,48 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 .hanbit-brand {
   font-family: "HanbitBrand", serif;
+}
+
+@font-face {
+    font-family: 'Waterfall';
+    src: url('Waterfall-Regular.woff2') format('woff2'),
+        url('Waterfall-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.waterfall {
+    font-family: "Waterfall", serif;
+}
+
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    src: url('IbarraRealNova-Regular.woff2') format('woff2'),
+        url('IbarraRealNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.ibarra {
+    font-family: "Ibarra Real Nova", serif;
+}
+
+@font-face {
+    font-family: 'Lavishly Yours';
+    src: url('LavishlyYours-Regular.woff2') format('woff2'),
+        url('LavishlyYours-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.lavishly {
+    font-family: "Lavishly Yours", serif;
 }
 
 /* Loading animation for 한빛 */

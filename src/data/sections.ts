@@ -1,5 +1,11 @@
 import type { ReactNode } from "react";
 import { createElement } from "react";
+import AboutGallery from "../components/AboutGallery";
+import airport from "../assets/airport.JPEG";
+import bike from "../assets/bike.JPEG";
+import cringe from "../assets/cringe.JPEG";
+import jacket from "../assets/jacket-nature-tunnel.JPEG";
+import mono from "../assets/mono-car.JPEG";
 
 export type SectionStep = {
   title: string;
@@ -18,7 +24,19 @@ export const sections: Section[] = [
     steps: [
       {
         title: "Who am I?",
-        text: "I am an enthusiastic digital designer..."
+        text: "I am an enthusiastic digital designer and developer aiming to make an impact on my users’ lives. I strive to be a better professional and person with the sole goal of helping others",
+        // Replace `images` with your real assets. Using `noise.png` as a placeholder example.
+        media: createElement(AboutGallery, {
+          images: [
+            { src: airport },
+            { src: bike },
+            { src: cringe },
+            { src: jacket },
+            { src: mono },
+          ],
+          columns: 2,
+          gap: 2,
+        })
       }
     ]
   },

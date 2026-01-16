@@ -74,7 +74,7 @@ export default function App() {
           )}
         </AnimatePresence>
         {/* Grid cell borders overlay */}
-        <div className="absolute inset-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] pointer-events-none">
+        <div className="absolute inset-0 z-0 grid grid-cols-[1fr_4fr_4fr_1fr] grid-rows-[1fr_4fr_4fr_1fr] pointer-events-none">
           {[1, 2, 3, 4].map((r) => (
             [1, 2, 3, 4].map((c) => (
               <div

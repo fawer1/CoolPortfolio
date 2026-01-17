@@ -34,8 +34,6 @@ export const sections: Section[] = [
             { src: jacket },
             { src: mono },
           ],
-          columns: 2,
-          gap: 2,
         })
       }
     ]
@@ -44,13 +42,13 @@ export const sections: Section[] = [
     id: "projects",
     steps: [
       {
-        title: "Project 1",
-        text: "A very cool short introduction...",
+        title: "CBR Learners App",
+        text: "I created a mobile app to help learners have an easier time learning theory and support their practical skills. The app allows users to learn theory and practice skills in a fun and interactive way.",
         media: createElement("div", { className: "bg-neutral-700 w-full h-full" }) // change to actual media - images
       },
       {
-        title: "Project 2",
-        text: "Another project description",
+        title: "Equine Integration",
+        text: "I created a desktop dashboard to help Equine Integration users manage their horses' health and well-being. The dashboard combines data coming from 3 other apps and allows users to view their horse's visualized data and receive alerts for health issues.",
         media: createElement("div", { className: "bg-neutral-600 w-full h-full" }) // change to actual media - images
       }
     ]

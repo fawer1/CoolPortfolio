@@ -64,7 +64,7 @@ export default function App() {
               className="col-start-1 row-start-1 flex justify-center items-center"
             >
               <ShinyText
-                className='text-3xl tracking-wider ibarra'
+                className='text-4xl tracking-wider waterfall'
                 text='Portfolio'
                 color="#e7000b"
                 shineColor="#91080f"

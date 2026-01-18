@@ -40,8 +40,8 @@ body {
 
 @font-face {
     font-family: 'Waterfall';
-    src: url('Waterfall-Regular.woff2') format('woff2'),
-        url('Waterfall-Regular.woff') format('woff');
+    src: url('./assets/Waterfall-Regular.woff') format('woff2'),
+        url('./assets/Waterfall-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

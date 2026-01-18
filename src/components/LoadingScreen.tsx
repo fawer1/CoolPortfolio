@@ -53,14 +53,6 @@ export default function LoadingScreen({
                     ? 'hanbit-exit'
                     : '';
 
-    const veilClass =
-        phase === 'enter'
-            ? 'hanbit-veil-enter'
-            : phase === 'hold'
-                ? 'hanbit-veil-hold'
-                : phase === 'exit'
-                    ? 'hanbit-veil-exit'
-                    : '';
 
     return (
         <div
@@ -72,12 +64,10 @@ export default function LoadingScreen({
                 ['--hanbit-veil' as string]: `0.35`,
             }}
         >
-            {/* Veil to blend with background */}
-            <div className={`absolute inset-0 bg-black ${veilClass}`} />
             {/* Center area aligned to grid */}
             <div className="col-start-2 col-end-4 row-start-2 row-end-4 flex items-center justify-center">
                 <div
-                    className={`${textClass} text-white font-bold select-none`}
+                    className={`${textClass} text-red-600 font-bold select-none hanbit-brand`}
                     style={{
                         willChange: 'transform, opacity',
                         fontSize: '45vh',

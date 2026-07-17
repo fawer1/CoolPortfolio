@@ -108,7 +108,7 @@ export default function ScrollLayout() {
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-6xl mb-4 waterfall">{step.title}</h2>
-                <p className="text-red-600 text-2xl ibarra">{step.text}</p>
+                <p className="text-red-600 text-2xl lora">{step.text}</p>
             </TextArea>
 
             {/* MEDIA */}

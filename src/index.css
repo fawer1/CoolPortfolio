@@ -53,8 +53,8 @@ body {
 
 @font-face {
     font-family: 'Ibarra Real Nova';
-    src: url('IbarraRealNova-Regular.woff2') format('woff2'),
-        url('IbarraRealNova-Regular.woff') format('woff');
+    src: url('./assets/IbarraRealNova-Regular.woff2') format('woff2'),
+        url('./assets/IbarraRealNova-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -66,8 +66,8 @@ body {
 
 @font-face {
     font-family: 'Lavishly Yours';
-    src: url('LavishlyYours-Regular.woff2') format('woff2'),
-        url('LavishlyYours-Regular.woff') format('woff');
+    src: url('./assets/LavishlyYours-Regular.woff2') format('woff2'),
+        url('./assets/LavishlyYours-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -75,6 +75,33 @@ body {
 
 .lavishly {
     font-family: "Lavishly Yours", serif;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('./assets/Lora-Regular.woff2') format('woff2'),
+        url('./assets/Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('./assets/Lora-Italic.woff2') format('woff2'),
+        url('./assets/Lora-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.lora-italic {
+  font-style: italic;
+  font-family: "Lora", serif;
 }
 
 /* Loading animation for 한빛 */

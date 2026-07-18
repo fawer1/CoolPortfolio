@@ -18,6 +18,10 @@ export type SectionStep = {
   title: string;
   text: string;
   media?: ReactNode;
+  link?: {
+    href: string;
+    text: string;
+  };
 };
 
 export type Section = {
@@ -57,7 +61,11 @@ export const sections: Section[] = [
             { src: drvn },
             { src: drvnmobile },
           ],
-        })
+        }),
+        link: {
+          href: "./cbr-learner.html",
+          text: "Open project page"
+        }
       },
       {
         title: "Equine Integration",

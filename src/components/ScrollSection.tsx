@@ -109,6 +109,14 @@ export default function ScrollLayout() {
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-6xl mb-4 waterfall">{step.title}</h2>
                 <p className="text-red-600 text-2xl lora">{step.text}</p>
+                {"link" in step && step.link ? (
+                    <a
+                        href={step.link.href}
+                        className="text-red-600 hover:text-red-700 underline"
+                    >
+                        {step.link.text}
+                    </a>
+                ) : null}
             </TextArea>
 
             {/* MEDIA */}

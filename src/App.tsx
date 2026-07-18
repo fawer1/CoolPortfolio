@@ -29,9 +29,9 @@ export default function App() {
     <>
       {showLoader && (
         <LoadingScreen
-          durationMs={5000}
-          inMs={1000}
-          outMs={1200}
+          durationMs={2000}
+          inMs={600}
+          outMs={700}
           onComplete={() => setShowLoader(false)}
         />
       )}

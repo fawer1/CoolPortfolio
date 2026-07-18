@@ -44,6 +44,7 @@ export default function App() {
         <AnimatePresence>
           {brandVisible && (
             <motion.div
+              key="top-right-brand"
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -57,6 +58,7 @@ export default function App() {
           )}
           {brandVisible && (
             <motion.div
+              key="portfolio-title"
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}

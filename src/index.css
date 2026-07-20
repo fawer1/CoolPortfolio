@@ -15,6 +15,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: rgba(145, 8, 15, 0.25);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(145, 8, 15, 0.25);
+  color: #ffffff;
+}
+
 /* Ensure full-viewport */
 html, body, #root {
   height: 100%;

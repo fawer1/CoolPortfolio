@@ -6,8 +6,8 @@ export const cbrSections: Section[] = [
         id: 'cbr-overview',
         steps: [
             {
-                title: 'CBR Learners',
-                text: 'A focused project page for the CBR Learners app.',
+                title: 'Partout | CBR practice app',
+                text: 'Project made in collaboration with Partout, a company that provides CBR practice for students. The app is designed to help students practice CBR questions in a fun and engaging way.',
                 media: (
                     <img
                         src={tryImage}
@@ -15,6 +15,8 @@ export const cbrSections: Section[] = [
                         className="h-full w-full object-cover"
                     />
                 ),
+                skillsTitle: 'Core Skills',
+                skills: ['Figma', 'UX Research', 'UI Design', 'Design System', 'User Scenario Mapping', 'Scrum'],
             },
         ],
     },

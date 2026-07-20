@@ -22,6 +22,8 @@ export type SectionStep = {
     href: string;
     text: string;
   };
+  skillsTitle?: string;
+  skills?: string[];
 };
 
 export type Section = {

@@ -4,6 +4,7 @@ import TextArea from "./TextArea";
 import MediaArea from "./MediaArea";
 import GridFrame from "./GridFrame";
 import Navigation from "./Navigation.tsx";
+import SkillButton from "./SkillButton.tsx";
 
 type ScrollSectionProps = {
     sections: Section[];
@@ -129,7 +130,7 @@ export default function ScrollLayout({ sections, contentPrefix = "content" }: Sc
         <GridFrame>
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
-                <h2 className="text-red-600 text-6xl mb-4 waterfall">{step.title}</h2>
+                <h2 className="text-red-600 text-6xl mb-8 waterfall">{step.title}</h2>
                 <p className="text-red-600 text-xl lora">{step.text}</p>
                 {"link" in step && step.link ? (
                     <a
@@ -138,6 +139,16 @@ export default function ScrollLayout({ sections, contentPrefix = "content" }: Sc
                     >
                         {step.link.text}
                     </a>
+                ) : null}
+                {"skillsTitle" in step && step.skillsTitle ? (
+                    <h3 className="text-red-600 text-5xl mt-10 waterfall">{step.skillsTitle}</h3>
+                ) : null}
+                {"skills" in step && step.skills ? (
+                    <div className="mt-4 flex flex-wrap">
+                        {step.skills.map((skill) => (
+                            <SkillButton key={skill} text={skill} />
+                        ))}
+                    </div>
                 ) : null}
             </TextArea>
 

@@ -5,6 +5,7 @@ import LoadingScreen from './components/LoadingScreen';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ShinyText from './components/GlowingText';
+import { sections } from './data/sections';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -91,7 +92,7 @@ export default function App() {
             ))
           ))}
         </div>
-        <ScrollSection />
+        <ScrollSection sections={sections} contentPrefix="main" />
       </main>
       <ColorBends
         rotation={0}

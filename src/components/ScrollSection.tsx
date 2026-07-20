@@ -1,37 +1,59 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { sections } from "../data/sections";
+import type { Section } from "../data/sections";
 import TextArea from "./TextArea";
 import MediaArea from "./MediaArea";
 import GridFrame from "./GridFrame";
 import Navigation from "./Navigation.tsx";
 
-export default function ScrollLayout() {
+type ScrollSectionProps = {
+    sections: Section[];
+    contentPrefix?: string;
+};
+
+export default function ScrollLayout({ sections, contentPrefix = "content" }: ScrollSectionProps) {
     const [sectionIndex, setSectionIndex] = useState(0);
     const [stepIndex, setStepIndex] = useState(0);
     const isAnimating = useRef(false);
+    const sectionsRef = useRef(sections);
+    const positionRef = useRef({ sectionIndex: 0, stepIndex: 0 });
+
+    useEffect(() => {
+        sectionsRef.current = sections;
+    }, [sections]);
+
+    useEffect(() => {
+        positionRef.current = { sectionIndex, stepIndex };
+    }, [sectionIndex, stepIndex]);
 
     const section = sections[sectionIndex];
     const step = section.steps[stepIndex];
-    const contentKey = `${sectionIndex}-${stepIndex}`;
+    const contentKey = `${contentPrefix}-${section.id}-${stepIndex}`;
 
     const goDown = useCallback(() => {
-        if (stepIndex < section.steps.length - 1) {
+        const currentSections = sectionsRef.current;
+        const { sectionIndex: currentSectionIndex, stepIndex: currentStepIndex } = positionRef.current;
+        const currentSection = currentSections[currentSectionIndex];
+
+        if (currentStepIndex < currentSection.steps.length - 1) {
             setStepIndex((s) => s + 1);
-        } else if (sectionIndex < sections.length - 1) {
+        } else if (currentSectionIndex < currentSections.length - 1) {
             setSectionIndex((s) => s + 1);
             setStepIndex(0);
         }
-    }, [sectionIndex, stepIndex, section.steps.length]);
+    }, []);
 
     const goUp = useCallback(() => {
-        if (stepIndex > 0) {
+        const currentSections = sectionsRef.current;
+        const { sectionIndex: currentSectionIndex, stepIndex: currentStepIndex } = positionRef.current;
+
+        if (currentStepIndex > 0) {
             setStepIndex((s) => s - 1);
-        } else if (sectionIndex > 0) {
-            const prevSection = sections[sectionIndex - 1];
+        } else if (currentSectionIndex > 0) {
+            const prevSection = currentSections[currentSectionIndex - 1];
             setSectionIndex((s) => s - 1);
             setStepIndex(prevSection.steps.length - 1);
         }
-    }, [sectionIndex, stepIndex]);
+    }, []);
 
     //NORMAL MOUSE NAVIGATION
     useEffect(() => {
@@ -108,7 +130,7 @@ export default function ScrollLayout() {
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-6xl mb-4 waterfall">{step.title}</h2>
-                <p className="text-red-600 text-2xl lora">{step.text}</p>
+                <p className="text-red-600 text-xl lora">{step.text}</p>
                 {"link" in step && step.link ? (
                     <a
                         href={step.link.href}

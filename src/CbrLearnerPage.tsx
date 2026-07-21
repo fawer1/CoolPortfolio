@@ -4,8 +4,12 @@ import ColorBends from './components/BackgroundLayer'
 import { AnimatePresence, motion } from 'framer-motion'
 import ShinyText from './components/GlowingText'
 import { cbrSections } from './data/cbrSections.tsx'
+import GridProgressLine from './components/GridProgressLine'
+import { useState } from 'react'
 
 export default function CbrLearnerPage() {
+    const [progress, setProgress] = useState(0)
+
     return (
         <>
             <main className={
@@ -13,6 +17,7 @@ export default function CbrLearnerPage() {
                 `opacity-100 scale-100 ` +
                 `transition-opacity duration-700 ease-out`
             }>
+                <GridProgressLine progress={progress} anchor="top" />
                 <AnimatePresence>
                     <motion.div
                         key="top-right-brand"
@@ -60,7 +65,13 @@ export default function CbrLearnerPage() {
                     ))}
                 </div>
 
-                <ScrollSection sections={cbrSections} contentPrefix="cbr" />
+                <ScrollSection
+                    sections={cbrSections}
+                    contentPrefix="cbr"
+                    onPositionChange={({ overallStepIndex, totalSteps }) => {
+                        setProgress(totalSteps <= 1 ? 1 : overallStepIndex / (totalSteps - 1))
+                    }}
+                />
             </main>
 
             <ColorBends

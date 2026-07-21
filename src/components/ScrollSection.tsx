@@ -9,9 +9,16 @@ import SkillButton from "./SkillButton.tsx";
 type ScrollSectionProps = {
     sections: Section[];
     contentPrefix?: string;
+    onPositionChange?: (position: {
+        sectionIndex: number;
+        stepIndex: number;
+        sectionCount: number;
+        totalSteps: number;
+        overallStepIndex: number;
+    }) => void;
 };
 
-export default function ScrollLayout({ sections, contentPrefix = "content" }: ScrollSectionProps) {
+export default function ScrollLayout({ sections, contentPrefix = "content", onPositionChange }: ScrollSectionProps) {
     const [sectionIndex, setSectionIndex] = useState(0);
     const [stepIndex, setStepIndex] = useState(0);
     const isAnimating = useRef(false);
@@ -25,6 +32,21 @@ export default function ScrollLayout({ sections, contentPrefix = "content" }: Sc
     useEffect(() => {
         positionRef.current = { sectionIndex, stepIndex };
     }, [sectionIndex, stepIndex]);
+
+    useEffect(() => {
+        const totalSteps = sections.reduce((count, currentSection) => count + currentSection.steps.length, 0);
+        const overallStepIndex = sections
+            .slice(0, sectionIndex)
+            .reduce((count, currentSection) => count + currentSection.steps.length, 0) + stepIndex;
+
+        onPositionChange?.({
+            sectionIndex,
+            stepIndex,
+            sectionCount: sections.length,
+            totalSteps,
+            overallStepIndex,
+        });
+    }, [onPositionChange, sectionIndex, sections, stepIndex]);
 
     const section = sections[sectionIndex];
     const step = section.steps[stepIndex];
@@ -131,7 +153,7 @@ export default function ScrollLayout({ sections, contentPrefix = "content" }: Sc
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-6xl mb-8 waterfall">{step.title}</h2>
-                <p className="text-red-600 text-xl lora">{step.text}</p>
+                <div className="text-red-600 text-lg lora whitespace-pre-line">{step.text}</div>
                 {"link" in step && step.link ? (
                     <a
                         href={step.link.href}

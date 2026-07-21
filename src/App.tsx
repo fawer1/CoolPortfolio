@@ -6,10 +6,12 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ShinyText from './components/GlowingText';
 import { sections } from './data/sections';
+import GridProgressLine from './components/GridProgressLine';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(true);
   const [brandVisible, setBrandVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
   const contentVisible = !showLoader;
   useEffect(() => {
     let t: number | undefined;
@@ -41,6 +43,7 @@ export default function App() {
         `${contentVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.7]'} ` +
         `transition-opacity duration-700 ease-out`
       }>
+        <GridProgressLine progress={progress} anchor="top" />
         {/* Top-right brand after loading */}
         <AnimatePresence>
           {brandVisible && (
@@ -92,7 +95,13 @@ export default function App() {
             ))
           ))}
         </div>
-        <ScrollSection sections={sections} contentPrefix="main" />
+        <ScrollSection
+          sections={sections}
+          contentPrefix="main"
+          onPositionChange={({ overallStepIndex, totalSteps }) => {
+            setProgress(totalSteps <= 1 ? 1 : overallStepIndex / (totalSteps - 1));
+          }}
+        />
       </main>
       <ColorBends
         rotation={0}

@@ -13,13 +13,29 @@ type AboutGalleryProps = {
     // legacy props for compatibility; ignored
     columns?: number;
     gap?: number;
+    useMasks?: boolean;
+    useFilters?: boolean;
+    slideClassName?: string;
+    slideObjectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
 };
 
 const AboutGallery: FC<AboutGalleryProps> = ({
     images,
     autoplay = true,
     intervalMs = 4000,
+    useMasks = true,
+    useFilters = true,
+    slideClassName,
+    slideObjectFit = 'cover',
 }) => {
+    const objectFitClass = {
+        cover: 'object-cover',
+        contain: 'object-contain',
+        fill: 'object-fill',
+        none: 'object-none',
+        'scale-down': 'object-scale-down',
+    }[slideObjectFit];
+
     const [index, setIndex] = useState(0);
     const timerRef = useRef<number | null>(null);
     const pausedRef = useRef(false);
@@ -56,7 +72,16 @@ const AboutGallery: FC<AboutGalleryProps> = ({
                     key={i}
                     src={img.src}
                     alt={img.alt ?? ''}
-                    className={`absolute inset-0 w-full h-full mask-b-from-50% mask-t-from-50% contrast-50 grayscale-50 sepia-30 object-cover transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0'}`}
+                    className={[
+                        'absolute inset-0 w-full h-full transition-opacity duration-500',
+                        objectFitClass,
+                        useMasks ? 'mask-b-from-50% mask-t-from-50%' : '',
+                        useFilters ? 'contrast-50 grayscale-50 sepia-30' : '',
+                        i === index ? 'opacity-100' : 'opacity-0',
+                        slideClassName ?? '',
+                    ]
+                        .filter(Boolean)
+                        .join(' ')}
                     draggable={true}
                 />
             ))}

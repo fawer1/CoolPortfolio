@@ -16,7 +16,7 @@ import interactions from "../assets/interactions.jpg";
 
 export type SectionStep = {
   title: string;
-  text: string;
+  text: ReactNode;
   media?: ReactNode;
   link?: {
     href: string;

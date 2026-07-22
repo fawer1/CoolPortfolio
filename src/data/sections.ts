@@ -55,6 +55,37 @@ export const sections: Section[] = [
     id: "projects",
     steps: [
       {
+        title: "Consulink B.V Internship | React Native app",
+        text: "I created a native mobile app from research, to design, till development for Consulink B.V. The app is built upon the already existing web platform and uses the backend that was previously created. My biggest and proudest project I've undertaken so far.",
+        media: createElement(AboutGallery, {
+          images: [
+            { src: cbr },
+            { src: drvn },
+            { src: drvnmobile },
+          ],
+        }),
+        link: {
+          href: "./consulink.html",  //create it later
+          text: "Open project page",
+        }
+      },
+      {
+        title: `"Sakura Creative" Branding`,
+        text: "In a team setting I created a branding for a fictional company called Sakura Creative. The branding includes a logo, color palette, typography, brand book, brand identity, and brand guidelines. It was inspired by the Japanese culture and the cherry blossom flower.",
+        media: createElement(AboutGallery, {
+          images: [
+            { src: overall },
+            { src: health },
+            { src: schedule },
+            { src: interactions },
+          ],
+        }),
+        link: {
+          href: "./sakura-creative.html", //create it later
+          text: "Open project page",
+        }
+      },
+      {
         title: "CBR Learners App",
         text: "I created a mobile app to help learners have an easier time learning theory and support their practical skills. The app allows users to learn theory and practice skills in a fun and interactive way.",
         media: createElement(AboutGallery, {
@@ -79,8 +110,13 @@ export const sections: Section[] = [
             { src: schedule },
             { src: interactions },
           ],
-        })
-      }
+        }),
+        link: {
+          href: "./equine-integration.html",  //create it later
+          text: "Open project page",
+        }
+      },
+      
     ]
   },
 ];

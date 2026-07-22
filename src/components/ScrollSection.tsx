@@ -153,11 +153,11 @@ export default function ScrollLayout({ sections, contentPrefix = "content", onPo
             {/* TEXT */}
             <TextArea contentKey={contentKey}>
                 <h2 className="text-red-600 text-6xl mb-8 waterfall">{step.title}</h2>
-                <div className="text-red-600 text-lg lora whitespace-pre-line">{step.text}</div>
+                <div className="text-red-600 text-lg lora whitespace-pre-line mb-4">{step.text}</div>
                 {"link" in step && step.link ? (
                     <a
                         href={step.link.href}
-                        className="text-red-600 hover:text-red-700 underline"
+                        className="text-red-600 hover:text-red-700 underline text-xl lora-italic"
                     >
                         {step.link.text}
                     </a>

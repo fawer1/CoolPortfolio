@@ -66,7 +66,7 @@ export const sections: Section[] = [
         }),
         link: {
           href: "./cbr-learner.html",
-          text: "Open project page"
+          text: "Open project page",
         }
       },
       {

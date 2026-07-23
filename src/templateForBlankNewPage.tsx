@@ -1,6 +1,5 @@
 import './index.css'
 import ColorBends from './components/BackgroundLayer'
-import ShinyText from './components/GlowingText'
 import { AnimatePresence, motion } from 'framer-motion'
 import tryImage from './assets/tryimage.jpg'
 import { useEffect } from 'react'
@@ -46,14 +45,6 @@ export default function CbrLearnerPage() {
                             transition={{ duration: 0.6, ease: 'easeOut' }}
                             className="col-start-1 flex justify-center items-center"
                         >
-                            <ShinyText
-                                className='text-4xl tracking-wider waterfall'
-                                text='Portfolio'
-                                color="#e7000b"
-                                shineColor="#91080f"
-                                yoyo
-                            />
-
                         </motion.div>
 
                         <motion.div

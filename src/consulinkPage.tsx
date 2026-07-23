@@ -2,11 +2,11 @@ import './index.css'
 import ScrollSection from './components/ScrollSection'
 import ColorBends from './components/BackgroundLayer'
 import { AnimatePresence, motion } from 'framer-motion'
-import { cbrSections } from './data/cbrSections.tsx'
 import GridProgressLine from './components/GridProgressLine'
 import { useState } from 'react'
+import { consulinkSections } from './data/consulinkSections.tsx'
 
-export default function CbrLearnerPage() {
+export default function ConsulinkPage() {
     const [progress, setProgress] = useState(0)
 
     return (
@@ -58,8 +58,8 @@ export default function CbrLearnerPage() {
                 </div>
 
                 <ScrollSection
-                    sections={cbrSections}
-                    contentPrefix="cbr"
+                    sections={consulinkSections}
+                    contentPrefix="consulink"
                     onPositionChange={({ overallStepIndex, totalSteps }) => {
                         setProgress(totalSteps <= 1 ? 1 : overallStepIndex / (totalSteps - 1))
                     }}

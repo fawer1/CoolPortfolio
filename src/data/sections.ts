@@ -37,7 +37,7 @@ export const sections: Section[] = [
     steps: [
       {
         title: "Who am I?",
-        text: "I am an enthusiastic digital designer and developer aiming to make an impact on my users’ lives. I strive to be a better professional and person with the sole goal of helping others",
+        text: "I am Furkan, an enthusiastic digital designer and developer aiming to make an impact on my users’ lives. I strive to be a better professional and person with the sole goal of helping others. Oh, and I also love Korean quite a bit, hence the Korean text you see on this page (it's my name in Korean).",
         // Replace `images` with your real assets. Using `noise.png` as a placeholder example.
         media: createElement(AboutGallery, {
           images: [

@@ -1,9 +1,10 @@
-import type { FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 type GalleryImage = {
     src: string;
     alt?: string;
+    style?: CSSProperties;
 };
 
 type AboutGalleryProps = {
@@ -72,6 +73,7 @@ const AboutGallery: FC<AboutGalleryProps> = ({
                     key={i}
                     src={img.src}
                     alt={img.alt ?? ''}
+                    style={img.style}
                     className={[
                         'absolute inset-0 w-full h-full transition-opacity duration-500',
                         objectFitClass,

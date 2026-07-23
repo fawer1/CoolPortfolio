@@ -1,12 +1,13 @@
 import type { ReactNode } from "react";
 import { createElement } from "react";
 import AboutGallery from "../components/AboutGallery";
-import airport from "../assets/airport.JPEG";
 import bike from "../assets/bike.JPEG";
 import cringe from "../assets/cringe.JPEG";
 import jacket from "../assets/jacket-nature-tunnel.JPEG";
 import mono from "../assets/mono-car.JPEG";
 import cbr from "../assets/Dashboard - ipad new.jpg";
+import me1 from "../assets/me1.jpg";
+import me2 from "../assets/me2.jpg";
 import drvn from "../assets/drvn brand.jpg";
 import drvnmobile from "../assets/drvn mobile.jpg";
 import overall from "../assets/Overall.jpg";
@@ -41,8 +42,9 @@ export const sections: Section[] = [
         // Replace `images` with your real assets. Using `noise.png` as a placeholder example.
         media: createElement(AboutGallery, {
           images: [
-            { src: airport },
+            { src: me1 },
             { src: bike },
+            { src: me2 },
             { src: cringe },
             { src: jacket },
             { src: mono },

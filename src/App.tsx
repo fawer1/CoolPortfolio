@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { sections } from './data/sections';
 import GridProgressLine from './components/GridProgressLine';
+import ShinyText from './components/GlowingText';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -68,6 +69,13 @@ export default function App() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="col-start-1 row-start-1 flex justify-center items-center"
             >
+              <ShinyText
+                className='text-4xl tracking-wider waterfall'
+                text='Portfolio'
+                color="#e7000b"
+                shineColor="#91080f"
+                yoyo
+              />
             </motion.div>
           )}
         </AnimatePresence>

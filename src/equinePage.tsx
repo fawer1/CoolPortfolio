@@ -1,13 +1,13 @@
 import './index.css'
-import ScrollSection from './components/ScrollSection'
-import ColorBends from './components/BackgroundLayer'
+import ScrollSection from './components/ScrollSection.tsx'
+import ColorBends from './components/BackgroundLayer.tsx'
 import { AnimatePresence, motion } from 'framer-motion'
-import GridProgressLine from './components/GridProgressLine'
+import GridProgressLine from './components/GridProgressLine.tsx'
 import { useState } from 'react'
-import { consulinkSections } from './data/consulinkSections.tsx'
+import { equineSections } from './data/equineSections.tsx'
 import ShinyText from './components/GlowingText.tsx'
 
-export default function ConsulinkPage() {
+export default function EquinePage() {
     const [progress, setProgress] = useState(0)
 
     return (
@@ -66,8 +66,8 @@ export default function ConsulinkPage() {
                 </div>
 
                 <ScrollSection
-                    sections={consulinkSections}
-                    contentPrefix="consulink"
+                    sections={equineSections}
+                    contentPrefix="equine"
                     onPositionChange={({ overallStepIndex, totalSteps }) => {
                         setProgress(totalSteps <= 1 ? 1 : overallStepIndex / (totalSteps - 1))
                     }}

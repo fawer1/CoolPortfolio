@@ -4,11 +4,11 @@ import type { Section } from './sections'
 
 export const consulinkSections: Section[] = [
     {
-        id: 'cbr-overview',
+        id: 'consulink-overview',
         steps: [
             {
-                title: 'Partout | CBR practice app',
-                text: 'Project made in collaboration with Partout, a company that provides CBR practice for students. The app is designed to help students practice CBR questions in a fun and engaging way.',
+                title: 'Internship project at Consulink B.V.',
+                text: 'My first internship project at Consulink B.V. involved designing a native mobile application for the live users of the then existing web platform. The goal was to create a mobile app that would allow users to access the platform on-the-go, while also providing a more user-friendly and intuitive interface.',
                 media: createElement(AboutGallery, {
                     images: [
                     ],
@@ -17,33 +17,26 @@ export const consulinkSections: Section[] = [
                     useFilters: false,
                 }),
                 skillsTitle: 'Core Skills',
-                skills: [''],
+                skills: ['React Native', 'Expo', 'TypeScript', 'Tailwind CSS', 'Figma', 'User Research', 'Prototyping', 'Scrum', 'Github', 'API Integration', 'Responsive Design', 'Accessibility', 'Debugging', 'Version Control',],
             },
         ],
     },
     {
-        id: '',
+        id: 'Overview & The Challenge',
         steps: [
             {
-                title: 'Discovering the Real Roadblocks (pun intended)',
+                title: 'From Web to Native: End-to-End App Development',
                 text: (
                     <>
-                        <p><em className='text-white'>The Challenge:</em> Teenagers are struggling to pass the CBR driving exams on their first try, resulting in long waiting times and less prepared drivers on the road.</p>
-                        <p className="mt-4"><em className='text-white'>Key Research Insights:</em></p>
-                        <ul className="mt-2 list-disc pl-6 space-y-4">
-                            <li>Expert interviews with driving instructors</li>
-                            <li>User interviews with recent exam takers</li>
-                            <li>Competitive analysis of existing practice tools</li>
-                        </ul>
-                        <p className="mt-4"><em className='text-white'>The Root Cause:</em> Discovered the primary culprit wasn't the lack of intelligence, but severe test anxiety and a lack of consistent practice.</p>
-                        <p className="mt-4"><em className='text-white'>Market Gap:</em> Competitors (like Theorie Toppers) offer good practice tools but lack the personalized, confidence-building touch needed to combat student stress.</p>
+                        <p><em className='text-white'>The Challenge:</em> Consulink had an existing web-based solution but needed a dedicated cross-platform native mobile app.</p>
+                        <p className="mt-4"><em className='text-white'>My Role:</em> As the sole designer and developer on this initiative, I was responsible for the entire product lifecycle - from initial UX research and wireframing to front-end development and API integration.</p>
+                        <p className="mt-4"><em className='text-white'>The Goal:</em> To translate complex web functionalities into an intuitive, user-friendly mobile experience while maintaining a single, efficient codebase.</p>
                     </>
                 ),
                 media: (
                     <div className="flex h-full items-center justify-center">
                         <img
                             // src={}
-                            alt="CBR Learners preview"
                             className="max-h-full w-full object-contain"
                         />
                     </div>
@@ -52,15 +45,16 @@ export const consulinkSections: Section[] = [
         ],
     },
     {
-        id: 'cbr-ideation&strategy',
+        id: 'Technical Research & UX Strategy',
         steps: [
             {
-                title: 'Ideation & Prioritization',
+                title: 'Laying the Groundwork',
                 text: (
                     <>
                         <ul className="mt-2 list-disc pl-6 space-y-4">
-                            <li><em className='text-white'>Brainstorming:</em> The team and I utilized the Lotus Blossom diagram to generate features focused on reducing anxiety and motivating users (e.g., gamification, bite-sized daily lessons).</li>
-                            <li><em className='text-white'>Adapting to Feedback:</em> We initially used a MoSCoW table to prioritize features. However, after constructive stakeholder feedback, we pivoted to an Eisenhower Matrix. This helped us effectively zero in on high-impact, feasible features.</li>
+                            <li><em className='text-white'>Technical Strategy:</em> I conducted extensive literature studies comparing cross-platform approaches (React Native vs. Flutter), ultimately choosing React Native and the Expo framework for optimal performance and codebase management.</li>
+                            <li><em className='text-white'>Understanding the User:</em> To ensure the mobile transition was seamless, I interviewed stakeholders to identify specific pain points and requirements regarding customer service solutions and conversational AI.</li>
+                            <li><em className='text-white'>Scoping the MVP:</em> I synthesized my research into User Journey Maps and a Site Map, utilizing a MoSCoW table to strictly define and prioritize the app's core functionalities.</li>
                         </ul>
                     </>
                 ),
@@ -77,16 +71,16 @@ export const consulinkSections: Section[] = [
         ],
     },
     {
-        id: 'cbr-wireframing&iteration',
+        id: 'Agile Design & Iteration',
         steps: [
             {
-                title: 'From Sketches to High-Fidelity',
+                title: 'Iterative Prototyping in Figma',
                 text: (
                     <>
                         <ul className="mt-2 list-disc pl-6 space-y-4">
-                            <li><em className='text-white'>Early concepts:</em> Each team member started with rapid lo-fi sketches, focusing heavily on layout and intuitive navigation for the gamified learning path.</li>
-                            <li><em className='text-white'>Continuous Iteration:</em> I took ownership of the gamified path, daily lessons, and quiz screens.</li>
-                            <li><em className='text-white'>User-Centric Refinements:</em> Through continuous peer feedback, we iterated heavily on cognitive load. We adjusted color palettes to be more calming, improved the flow of the roadmap, and repositioned quiz buttons to make the experience frictionless.</li>
+                            <li><em className='text-white'>Design Evolution:</em> I designed mid-fidelity and high-fidelity screens in Figma, pushing through four major iterations to ensure the UI met professional standards.</li>
+                            <li><em className='text-white'>Testing & Validation:</em> Lacking direct end-users, I adapted by conducting A/B testing and gathering rigorous feedback from internal colleagues and mentors to validate my design choices.</li>
+                            <li><em className='text-white'>Pivoting the Workflow:</em> Originally planning to design the entire app before coding, I pivoted to an Agile approach based on mentor feedback. I began designing and developing in smaller, feature-based sprint cycles to align with the company's continuous development environment.</li>
                         </ul>
                     </>
                 ),
@@ -102,15 +96,24 @@ export const consulinkSections: Section[] = [
         ],
     },
     {
-        id: 'cbr-final-solution',
+        id: 'Front-End Development & Execution',
         steps: [
             {
-                title: 'The Final Prototype',
-                text: 'An interactive learning platform that uses a gamified path to encourage consistent, daily study habits while implementing a calming UI to minimize exam anxiety.',
+                title: 'Bringing the App to Life',
+                text: (
+                    <>
+                        <ul className="mt-2 list-disc pl-6 space-y-4">
+                            <li><em className='text-white'>Front-End Development:</em> I built the app using React Native, Expo, and TypeScript, ensuring a smooth user experience across devices.</li>
+                            <li><em className='text-white'>API Integration:</em> Working alongside the backend team, I successfully integrated the app with Consulink's existing APIs, placing a heavy emphasis on strict error handling for API calls.</li>
+                            <li><em className='text-white'>Dynamic Features:</em> I developed the main inbox screen with dynamic conversation fetching, a fully functional chat interface, and data filtering.</li>
+                            <li><em className='text-white'>Polishing the UI:</em> I implemented complex UI components and micro-interactions, including a custom BottomSheetModal and smooth conversation delete animations to enhance the native feel.</li>
+                            <li><em className='text-white'>Advanced Capabilities:</em> I expanded the app's accessibility and utility by integrating translation features and an authentication portal.</li>
+                        </ul>
+                    </>
+                ),
                 media: (
                     <img
                         // src={cbrHifi}
-                        alt="CBR Learners preview"
                         className="max-h-full w-full object-contain"
                     />
                 )

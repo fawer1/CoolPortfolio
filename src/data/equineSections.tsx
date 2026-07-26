@@ -1,6 +1,19 @@
 import { createElement } from "react";
 import AboutGallery from '../components/AboutGallery';
 import type { Section } from './sections'
+import equineMain from '../assets/equine-images/equineMain.png'
+import environment from '../assets/equine-images/Environment.png'
+import nutrition from '../assets/equine-images/Nutrition.png'
+import profilepage from '../assets/equine-images/profilepage.png'
+import training from '../assets/equine-images/Training.png'
+import eqfeaturemap from '../assets/equine-images/eqfeaturemap.jpeg'
+import eqfeaturemapmoscow from '../assets/equine-images/eqfeaturemapmoscow.jpeg'
+import eq3Dconcept from '../assets/equine-images/eq3Dconcept.JPEG'
+import trash from '../assets/equine-images/trashfirst.png'
+import midfidash from '../assets/equine-images/mid-fidash.png'
+import midfidash2 from '../assets/equine-images/mid-fidash2.png'
+import midfiwhite from '../assets/equine-images/mid-fiwhite.png'
+import cbrHifi from '../assets/equine-images/cbr-hifi.gif'
 
 export const equineSections: Section[] = [
     {
@@ -11,6 +24,7 @@ export const equineSections: Section[] = [
                 text: 'My project with Equine Integration (EI) involved designing a centralized web dashboard that consolidated data from multiple separate tracking applications (such as EI Potential, Sleip, and Feedwise). The goal was to create a unified platform that would allow equine professionals to access and analyze data related to horse well-being, while also providing a more user-friendly and intuitive interface.',
                 media: createElement(AboutGallery, {
                     images: [
+                        { src: equineMain },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -34,14 +48,17 @@ export const equineSections: Section[] = [
                         <p className="mt-4"><em className='text-white'>My Role:</em> I was a UX and UI designer throughout the project, as well as the main and primary contact person managing stakeholder and cross-team communication.</p>
                     </>
                 ),
-                media: (
-                    <div className="flex h-full items-center justify-center">
-                        <img
-                            // src={}
-                            className="max-h-full w-full object-contain"
-                        />
-                    </div>
-                ),
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: environment },
+                        { src: nutrition },
+                        { src: profilepage },
+                        { src: training },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                }),
             },
         ],
     },
@@ -62,8 +79,8 @@ export const equineSections: Section[] = [
                 ),
                 media: createElement(AboutGallery, {
                     images: [
-                        // { src:  },
-                        // { src:  },
+                        { src: eqfeaturemap },
+                        { src: eqfeaturemapmoscow },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -89,7 +106,11 @@ export const equineSections: Section[] = [
                 ),
                 media: createElement(AboutGallery, {
                     images: [
-                        // { src: sketch1 },
+                        { src: eq3Dconcept },
+                        { src: trash },
+                        { src: midfidash },
+                        { src: midfidash2 },
+                        { src: midfiwhite },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -113,12 +134,14 @@ export const equineSections: Section[] = [
                         </ul>
                     </>
                 ),
-                media: (
-                    <img
-                        // src={cbrHifi}
-                        className="max-h-full w-full object-contain"
-                    />
-                )
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: cbrHifi },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                })
             },
         ],
     },

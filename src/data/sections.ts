@@ -67,7 +67,7 @@ export const sections: Section[] = [
           ],
         }),
         link: {
-          href: "./consulink.html",  //create it later
+          href: "./consulink.html",
           text: "Open project page",
         }
       },
@@ -83,7 +83,7 @@ export const sections: Section[] = [
           ],
         }),
         link: {
-          href: "./sakuraCreativePage.html", //create it later
+          href: "./sakura.html",
           text: "Open project page",
         }
       },

@@ -14,6 +14,12 @@ import overall from "../assets/Overall.jpg";
 import health from "../assets/Health.jpg";
 import schedule from "../assets/Schedule.jpg";
 import interactions from "../assets/interactions.jpg";
+import midfi from "../assets/consulink-images/consulinkmid-fi.png";
+import consmoscow from "../assets/consulink-images/consulinkmoscow.png";
+import devatglance from "../assets/consulink-images/devatglance.png";
+import midfimock from "../assets/consulink-images/mid-fimockup.png";
+import sakurabrandbookcover from "../assets/sakura-images/sakurabrandbookcover.png";
+import sakurabrandbookpage from "../assets/sakura-images/sakurabrandbookpage.png";
 
 export type SectionStep = {
   title: string;
@@ -61,9 +67,10 @@ export const sections: Section[] = [
         text: "I created a native mobile app from research, to design, till development for Consulink B.V. The app is built upon the already existing web platform and uses the backend that was previously created. My biggest and proudest project I've undertaken so far.",
         media: createElement(AboutGallery, {
           images: [
-            { src: cbr },
-            { src: drvn },
-            { src: drvnmobile },
+            { src: midfi },
+            { src: devatglance },
+            { src: consmoscow },
+            { src: midfimock, style: { objectFit: "contain" } },
           ],
         }),
         link: {
@@ -76,10 +83,8 @@ export const sections: Section[] = [
         text: "In a team setting I created a branding for a fictional company called Sakura Creative. The branding includes a logo, color palette, typography, brand book, brand identity, and brand guidelines. It was inspired by the Japanese culture and the cherry blossom flower.",
         media: createElement(AboutGallery, {
           images: [
-            { src: overall },
-            { src: health },
-            { src: schedule },
-            { src: interactions },
+            { src: sakurabrandbookcover, style: { objectFit: "contain" } },
+            { src: sakurabrandbookpage, style: { objectFit: "contain" } },
           ],
         }),
         link: {
@@ -88,7 +93,7 @@ export const sections: Section[] = [
         }
       },
       {
-        title: "CBR Learners App",
+        title: `CBR Learners App | "Drvn"`,
         text: "I created a mobile app to help learners have an easier time learning theory and support their practical skills. The app allows users to learn theory and practice skills in a fun and interactive way.",
         media: createElement(AboutGallery, {
           images: [

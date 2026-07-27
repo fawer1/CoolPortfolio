@@ -1,6 +1,19 @@
 import { createElement } from "react";
 import AboutGallery from '../components/AboutGallery';
 import type { Section } from './sections'
+import sakuraLogo from '../assets/sakura-images/sakura-logo.png';
+import sakuraLogo2 from '../assets/sakura-images/sakura-logo2.png';
+import brandBookCover from '../assets/sakura-images/sakurabrandbookcover.png';
+import sakuraPresentCover from '../assets/sakura-images/sakurapresentationcover.png';
+import sakuraSketches from '../assets/sakura-images/sakurasketches.jpg';
+import sakuraScrum from '../assets/sakura-images/sakurascrum.png';
+import sakuraSketch1 from '../assets/sakura-images/sakbranddraw.jpg';
+import sakuraSketch2 from '../assets/sakura-images/sakbranddraw2.jpg';
+import sakuraReq from '../assets/sakura-images/sakbrandreq.jpg';
+import sakuraBrandBookIteration1 from '../assets/sakura-images/sakbbiter1.png';
+import sakuraBrandBookIteration2 from '../assets/sakura-images/sakbbiter2.png';
+import sakuraBrandBookFont from '../assets/sakura-images/sakbbfont.png';
+import endlogos from '../assets/sakura-images/endlogos.png';
 
 export const sakuraSections: Section[] = [
     {
@@ -11,6 +24,8 @@ export const sakuraSections: Section[] = [
                 text: `As a branding project, I developed a comprehensive brand identity for Sakura Creative, a fictional creative agency. The project encompassed logo design, color palette selection, typography, and visual style guidelines. The goal was to create a cohesive and visually appealing brand that reflects the agency's values and mission.`,
                 media: createElement(AboutGallery, {
                     images: [
+                        { src: sakuraLogo2 },
+                        { src: sakuraLogo },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -33,14 +48,15 @@ export const sakuraSections: Section[] = [
                         <p className="mt-4"><em className='text-white'>Visual Philosophy:</em> The brand was designed to be a visual escape from daily chaos—evoking harmony and mindfulness through clean, minimalistic, and modern Japanese aesthetics.</p>
                     </>
                 ),
-                media: (
-                    <div className="flex h-full items-center justify-center">
-                        <img
-                            // src={}
-                            className="max-h-full w-full object-contain"
-                        />
-                    </div>
-                ),
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: brandBookCover },
+                        { src: sakuraPresentCover },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                }),
             },
         ],
     },
@@ -61,8 +77,8 @@ export const sakuraSections: Section[] = [
                 ),
                 media: createElement(AboutGallery, {
                     images: [
-                        // { src:  },
-                        // { src:  },
+                        { src: sakuraScrum },
+                        { src: sakuraSketches },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -72,7 +88,7 @@ export const sakuraSections: Section[] = [
         ],
     },
     {
-        id: 'Developing the Brand Book',
+        id: 'Creating the Brand Book',
         steps: [
             {
                 title: 'Structuring the Style Guide',
@@ -86,12 +102,19 @@ export const sakuraSections: Section[] = [
                         </ul>
                     </>
                 ),
-                media: (
-                    <img
-                        // src={cbrHifi}
-                        className="max-h-full w-full object-contain"
-                    />
-                )
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: sakuraReq },
+                        { src: sakuraSketch1 },
+                        { src: sakuraSketch2 },
+                        { src: sakuraBrandBookIteration1 },
+                        { src: sakuraBrandBookIteration2 },
+                        { src: sakuraBrandBookFont },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                })
             },
         ],
     },
@@ -102,19 +125,23 @@ export const sakuraSections: Section[] = [
                 title: 'Refining Through Feedback',
                 text: (
                     <>
-                        <ul className="mt-2 list-disc pl-6 space-y-4">
+                        <ul className="my-2 list-disc pl-6 space-y-4">
                             <li><em className='text-white'>Defending Design Decisions:</em> When experts challenged our minimalist approach and literal logo interpretation, I successfully defended our choices by tying every visual element back to our core brand identity and target audience.</li>
                             <li><em className='text-white'>Iterating for Contrast:</em> Based on peer feedback, we introduced a striking dark purple/pink palette exclusively for the title pages, creating a beautiful visual break from the otherwise minimalist book.</li>
                             <li><em className='text-white'>Improving Accessibility:</em> A mentor pointed out that our target audience might not understand the decorative Kanji. We iterated on the design to include English translations alongside the Japanese characters, ensuring the brand message was universally understood.</li>
                         </ul>
+                        <a href="https://i516906.hera.fontysict.net/Sem3-Re/files/Sakura-creative-brand-book.pdf" target="_blank" className="text-white ml-2 hover:text-sakura underline">View the Full Brand Book</a>
                     </>
                 ),
-                media: (
-                    <img
-                        // src={cbrHifi}
-                        className="max-h-full w-full object-contain"
-                    />
-                )
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: endlogos },
+                        { src: brandBookCover },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                })
             },
         ],
     },

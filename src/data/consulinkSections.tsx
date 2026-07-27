@@ -1,6 +1,20 @@
 import { createElement } from "react";
 import AboutGallery from '../components/AboutGallery';
 import type { Section } from './sections'
+import convDel from '../assets/consulink-images/convinfodelete.gif'
+import filter from '../assets/consulink-images/filteringg.gif'
+import mark from '../assets/consulink-images/imagesmarking.gif'
+import loginsortheme from '../assets/consulink-images/loginsortingtheme.gif'
+import markingmain from '../assets/consulink-images/mainscreenmarking.gif'
+import consmainfunc from '../assets/consulink-images/consmainfunc.jpg'
+import devatglance from '../assets/consulink-images/devatglance.png'
+import sitemap from '../assets/consulink-images/consulinksitemap.jpg'
+import moscow from '../assets/consulink-images/consulinkmoscow.jpg'
+import research from '../assets/consulink-images/consresearch.png'
+import iter1 from '../assets/consulink-images/iteration1.jpg'
+import iter1conv from '../assets/consulink-images/iter1conv.jpg'
+import iter2 from '../assets/consulink-images/iter2.jpg'
+import iter3 from '../assets/consulink-images/iter3.jpg'
 
 export const consulinkSections: Section[] = [
     {
@@ -11,6 +25,7 @@ export const consulinkSections: Section[] = [
                 text: 'My first internship project at Consulink B.V. involved designing a native mobile application for the live users of the then existing web platform. The goal was to create a mobile app that would allow users to access the platform on-the-go, while also providing a more user-friendly and intuitive interface.',
                 media: createElement(AboutGallery, {
                     images: [
+                        { src: loginsortheme },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -33,14 +48,15 @@ export const consulinkSections: Section[] = [
                         <p className="mt-4"><em className='text-white'>The Goal:</em> To translate complex web functionalities into an intuitive, user-friendly mobile experience while maintaining a single, efficient codebase.</p>
                     </>
                 ),
-                media: (
-                    <div className="flex h-full items-center justify-center">
-                        <img
-                            // src={}
-                            className="max-h-full w-full object-contain"
-                        />
-                    </div>
-                ),
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: consmainfunc },
+                        { src: devatglance },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                }),
             },
         ],
     },
@@ -60,8 +76,9 @@ export const consulinkSections: Section[] = [
                 ),
                 media: createElement(AboutGallery, {
                     images: [
-                        // { src:  },
-                        // { src:  },
+                        { src: research },
+                        { src: moscow },
+                        { src: sitemap },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -86,7 +103,11 @@ export const consulinkSections: Section[] = [
                 ),
                 media: createElement(AboutGallery, {
                     images: [
-                        // { src: sketch1 },
+                        { src: iter1 },
+                        { src: iter1conv },
+                        { src: iter2 },
+                        { src: iter3 },
+                        { src: mark },
                     ],
                     slideObjectFit: 'contain',
                     useMasks: false,
@@ -111,12 +132,19 @@ export const consulinkSections: Section[] = [
                         </ul>
                     </>
                 ),
-                media: (
-                    <img
-                        // src={cbrHifi}
-                        className="max-h-full w-full object-contain"
-                    />
-                )
+                media: createElement(AboutGallery, {
+                    images: [
+                        { src: markingmain },
+                        { src: convDel },
+                        { src: filter },
+                        { src: mark },
+                        { src: loginsortheme },
+                    ],
+                    slideObjectFit: 'contain',
+                    useMasks: false,
+                    useFilters: false,
+                    intervalMs: 20000,
+                }),
             },
         ],
     },

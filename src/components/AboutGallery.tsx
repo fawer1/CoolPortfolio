@@ -11,7 +11,6 @@ type AboutGalleryProps = {
     images: GalleryImage[];
     autoplay?: boolean;      // auto-advance
     intervalMs?: number;     // autoplay interval
-    // legacy props for compatibility; ignored
     columns?: number;
     gap?: number;
     useMasks?: boolean;

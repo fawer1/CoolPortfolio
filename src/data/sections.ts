@@ -67,10 +67,10 @@ export const sections: Section[] = [
         text: "I created a native mobile app from research, to design, till development for Consulink B.V. The app is built upon the already existing web platform and uses the backend that was previously created. My biggest and proudest project I've undertaken so far.",
         media: createElement(AboutGallery, {
           images: [
-            { src: midfi },
-            { src: devatglance },
-            { src: consmoscow },
             { src: midfimock, style: { objectFit: "contain" } },
+            { src: devatglance },
+            { src: midfi },
+            { src: consmoscow },
           ],
         }),
         link: {

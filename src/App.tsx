@@ -4,9 +4,9 @@ import ColorBends from './components/BackgroundLayer';
 import LoadingScreen from './components/LoadingScreen';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import ShinyText from './components/GlowingText';
 import { sections } from './data/sections';
 import GridProgressLine from './components/GridProgressLine';
+import ShinyText from './components/GlowingText';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(true);

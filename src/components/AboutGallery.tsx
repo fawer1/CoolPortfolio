@@ -1,16 +1,16 @@
-import type { FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 type GalleryImage = {
     src: string;
     alt?: string;
+    style?: CSSProperties;
 };
 
 type AboutGalleryProps = {
     images: GalleryImage[];
     autoplay?: boolean;      // auto-advance
     intervalMs?: number;     // autoplay interval
-    // legacy props for compatibility; ignored
     columns?: number;
     gap?: number;
     useMasks?: boolean;
@@ -72,6 +72,7 @@ const AboutGallery: FC<AboutGalleryProps> = ({
                     key={i}
                     src={img.src}
                     alt={img.alt ?? ''}
+                    style={img.style}
                     className={[
                         'absolute inset-0 w-full h-full transition-opacity duration-500',
                         objectFitClass,

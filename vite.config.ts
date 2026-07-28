@@ -21,6 +21,9 @@ export default defineConfig({
       input: {
         main: path.resolve(rootDir, 'index.html'),
         cbrLearner: path.resolve(rootDir, 'cbr-learner.html'),
+        consulink: path.resolve(rootDir, 'consulink.html'),
+        equine: path.resolve(rootDir, 'equine.html'),
+        sakura: path.resolve(rootDir, 'sakura.html'),
       },
     },
   },

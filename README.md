@@ -1,10 +1,10 @@
 # Furkan Smail | Portfolio
 
-A sleek, animated portfolio built with React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Three.js. It features a GPU-accelerated background, smooth section-based storytelling, and polished motion design.
+A sleek, animated portfolio built with React, TypeScript, Vite, Tailwind CSS and Framer Motion. It features and showcases my selected work throughout my study.
 
 ## Overview
 
-This app presents content in focused "sections" (About, Projects) with steps you navigate by scroll, keyboard, or touch. A custom loading sequence reveals the brand and a shimmering "Portfolio" title, while the background runs a real-time shader for subtle movement.
+This website presents content in focused "sections" (About, Projects) with steps you navigate by scroll, keyboard, or touch rather than the usual document structure. I wanted to explore this approach for a more engaging and user-friendly experience.
 
 ## Features
 
@@ -12,12 +12,11 @@ This app presents content in focused "sections" (About, Projects) with steps you
 - Animated transitions using Framer Motion with route-safe mounts/unmounts.
 - Custom loading screen with timed phases and brand reveal.
 - Three.js shader background (`ColorBends`) with configurable colors and motion.
-- Responsive 4x4 grid layout and modern styling via Tailwind CSS v4.
 - Project/image galleries via `AboutGallery` with autoplay and controls.
 
 ## Tech Stack
 
-- React 19 + TypeScript
+- React + TypeScript
 - Vite (rolldown-vite) with `@vitejs/plugin-react` and React Compiler
 - Tailwind CSS v4 (`@tailwindcss/vite`)
 - Framer Motion for transitions and animation utils

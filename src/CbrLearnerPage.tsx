@@ -2,10 +2,10 @@ import './index.css'
 import ScrollSection from './components/ScrollSection'
 import ColorBends from './components/BackgroundLayer'
 import { AnimatePresence, motion } from 'framer-motion'
-import ShinyText from './components/GlowingText'
 import { cbrSections } from './data/cbrSections.tsx'
 import GridProgressLine from './components/GridProgressLine'
 import { useState } from 'react'
+import ShinyText from './components/GlowingText.tsx'
 
 export default function CbrLearnerPage() {
     const [progress, setProgress] = useState(0)

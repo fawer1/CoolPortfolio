@@ -23,7 +23,7 @@ import sakurabrandbookpage from "../assets/sakura-images/sakurabrandbookpage.png
 
 export type SectionStep = {
   title: string;
-  text: ReactNode;
+  text?: ReactNode;
   media?: ReactNode;
   link?: {
     href: string;
@@ -75,7 +75,7 @@ export const sections: Section[] = [
         }),
         link: {
           href: "./consulink.html",
-          text: "Open project page",
+          text: "Go to Project",
         }
       },
       {
@@ -89,7 +89,7 @@ export const sections: Section[] = [
         }),
         link: {
           href: "./sakura.html",
-          text: "Open project page",
+          text: "Go to Project",
         }
       },
       {
@@ -104,7 +104,7 @@ export const sections: Section[] = [
         }),
         link: {
           href: "./cbr-learner.html",
-          text: "Open project page",
+          text: "Go to Project",
         }
       },
       {
@@ -120,10 +120,30 @@ export const sections: Section[] = [
         }),
         link: {
           href: "./equine.html",
-          text: "Open project page",
+          text: "Go to Project",
         }
       },
-      
+      {
+        title: "Let's connect!",
+        text: (
+          <ul className="my-3 space-y-4 waterfall text-5xl">
+            <li><a href="https://www.instagram.com/smile_fm/" target="_blank">Instagram</a></li>
+            <li><a href="https://github.com/fawer1" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/furkan-smail-56b8a4256/" target="_blank">LinkedIn</a></li>
+            <li>Email: furkanmusa2@gmail.com</li>
+          </ul>
+        ),
+        media: createElement(AboutGallery, {
+          images: [
+            { src: me1 },
+            { src: me2 },
+            { src: devatglance, style: { objectFit: "contain" } },
+            { src: sakurabrandbookcover },
+            { src: drvn },
+            { src: overall },
+          ],
+        }),
+      },
     ]
   },
 ];

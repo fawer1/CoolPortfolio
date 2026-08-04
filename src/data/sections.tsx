@@ -20,6 +20,7 @@ import devatglance from "../assets/consulink-images/devatglance.png";
 import midfimock from "../assets/consulink-images/mid-fimockup.png";
 import sakurabrandbookcover from "../assets/sakura-images/sakurabrandbookcover.png";
 import sakurabrandbookpage from "../assets/sakura-images/sakurabrandbookpage.png";
+import cv from "../assets/Furkan-Smail-CV.pdf";
 
 export type SectionStep = {
   title: string;
@@ -130,7 +131,8 @@ export const sections: Section[] = [
             <li><a href="https://www.instagram.com/smile_fm/" target="_blank">Instagram</a></li>
             <li><a href="https://github.com/fawer1" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/furkan-smail-56b8a4256/" target="_blank">LinkedIn</a></li>
-            <li>Email: furkanmusa2@gmail.com</li>
+            <li><a href={cv} target="_blank">CV</a></li>
+            <li><a href="mailto:furkanmusa2@gmail.com">Email</a></li>
           </ul>
         ),
         media: createElement(AboutGallery, {

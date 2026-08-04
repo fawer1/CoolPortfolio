@@ -17,10 +17,38 @@ export default function LoadingScreen({
     settleMs = 800,
     onComplete,
 }: LoadingScreenProps) {
-    const [phase, setPhase] = useState<'enter' | 'hold' | 'exit' | 'done'>('enter');
+    const [fontReady, setFontReady] = useState(false);
+    const [phase, setPhase] = useState<'preload' | 'enter' | 'hold' | 'exit' | 'done'>('preload');
     const timers = useRef<number[]>([]);
 
     useEffect(() => {
+        let cancelled = false;
+
+        const loadFont = async () => {
+            try {
+                if (document.fonts?.load) {
+                    await document.fonts.load('45vh "HanbitBrand"', '한빛');
+                    await document.fonts.ready;
+                }
+            } finally {
+                if (!cancelled) {
+                    setFontReady(true);
+                }
+            }
+        };
+
+        void loadFont();
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!fontReady) return;
+
+        setPhase('enter');
+
         const total = Math.max(durationMs, inMs + outMs + gapMs);
         const holdMs = Math.max(0, total - inMs - outMs - gapMs);
 
@@ -34,7 +62,7 @@ export default function LoadingScreen({
             timers.current.forEach((t) => clearTimeout(t));
             timers.current = [];
         };
-    }, [durationMs, inMs, outMs, gapMs]);
+    }, [fontReady, durationMs, inMs, outMs, gapMs]);
 
     useEffect(() => {
         if (phase === 'done') {
@@ -43,6 +71,10 @@ export default function LoadingScreen({
     }, [phase, onComplete]);
 
     if (phase === 'done') return null;
+
+    if (!fontReady) {
+        return <div className="fixed inset-0 z-50" />;
+    }
 
     const textClass =
         phase === 'enter'

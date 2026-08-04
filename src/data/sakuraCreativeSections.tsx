@@ -14,6 +14,7 @@ import sakuraBrandBookIteration1 from '../assets/sakura-images/sakbbiter1.png';
 import sakuraBrandBookIteration2 from '../assets/sakura-images/sakbbiter2.png';
 import sakuraBrandBookFont from '../assets/sakura-images/sakbbfont.png';
 import endlogos from '../assets/sakura-images/endlogos.png';
+import sakuraBrandBook from '../assets/Sakura Creative Brand Book.pdf';
 
 export const sakuraSections: Section[] = [
     {
@@ -130,7 +131,7 @@ export const sakuraSections: Section[] = [
                             <li><em className='text-white'>Iterating for Contrast:</em> Based on peer feedback, we introduced a striking dark purple/pink palette exclusively for the title pages, creating a beautiful visual break from the otherwise minimalist book.</li>
                             <li><em className='text-white'>Improving Accessibility:</em> A mentor pointed out that our target audience might not understand the decorative Kanji. We iterated on the design to include English translations alongside the Japanese characters, ensuring the brand message was universally understood.</li>
                         </ul>
-                        <a href="https://i516906.hera.fontysict.net/Sem3-Re/files/Sakura-creative-brand-book.pdf" target="_blank" className="text-white ml-2 hover:text-sakura underline">View the Full Brand Book</a>
+                        <a href={sakuraBrandBook} target="_blank" className="text-white ml-2 hover:text-sakura underline">View the Full Brand Book</a>
                     </>
                 ),
                 media: createElement(AboutGallery, {

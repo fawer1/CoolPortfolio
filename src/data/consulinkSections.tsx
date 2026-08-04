@@ -98,6 +98,7 @@ export const consulinkSections: Section[] = [
                             <li><em className='text-white'>Design Evolution:</em> I designed mid-fidelity and high-fidelity screens in Figma, pushing through four major iterations to ensure the UI met professional standards.</li>
                             <li><em className='text-white'>Testing & Validation:</em> Lacking direct end-users, I adapted by conducting A/B testing and gathering rigorous feedback from internal colleagues and mentors to validate my design choices.</li>
                             <li><em className='text-white'>Pivoting the Workflow:</em> Originally planning to design the entire app before coding, I pivoted to an Agile approach based on mentor feedback. I began designing and developing in smaller, feature-based sprint cycles to align with the company's continuous development environment.</li>
+                            <li><em>If you want to explore my design phase in detail, please look at the following figma file: <a href="https://www.figma.com/design/Y4tijXQqY0FR1z1BsUdvHr/App-design?node-id=10-112&t=MVfEGZyERqFnkoXR-1" target="_blank" className="text-stone-200 underline">Consulink Design</a></em></li>
                         </ul>
                     </>
                 ),
